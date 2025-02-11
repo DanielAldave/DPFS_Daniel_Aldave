@@ -1,0 +1,22 @@
+{
+  "name": "dpfs_daniel_aldave",
+  "version": "1.0.0",
+  "description": "Proyecto FullStack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielAldave/DPFS_Daniel_Aldave.git"
+  },
+  "author": "DanielAldave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielAldave/DPFS_Daniel_Aldave/issues"
+  },
+  "homepage": "https://github.com/DanielAldave/DPFS_Daniel_Aldave#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
