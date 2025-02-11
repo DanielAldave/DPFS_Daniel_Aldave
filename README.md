@@ -4,7 +4,7 @@
 Tematica del sitio:
 
 El sitio será una tienda en línea especializada en la venta de ropa de vestir, enfocada en ofrecer prendas adecuadas para el trabajo y eventos sociales. El diseño será minimalista, con una experiencia de usuario amigable que facilite la compra en línea.
-El nombre va a ser "El Rey del Pantalon"
+El nombre va a ser "El Rey de los Pantalones"
 
 Publico objetivo:
 El público al que se planea dirigir incluye a profesionales y personas que asisten a eventos sociales o formales, como cenas, bodas o conferencias. Esto abarca a hombres y mujeres de diversas edades que buscan ropa de calidad, versátil y accesible para su trabajo o eventos especiales.
