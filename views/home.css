@@ -1,0 +1,14 @@
+/* articulos de la tienda */
+article {
+    
+    border: 2px groove;
+}
+
+.producto-catalogo{
+    text-align:center;
+}
+
+.imagen-producto{
+    width: 200px;
+    height: 200px;
+}

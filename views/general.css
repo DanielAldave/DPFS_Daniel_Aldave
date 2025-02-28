@@ -1,0 +1,42 @@
+*{
+    font-family: Arial;
+}
+
+.top-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ddd
+}
+
+/* Modificar el contenedor del logo */
+.logo {
+    width: 200px; /* Ancho del div */
+    height: auto; /* Altura automática */
+    display: flex; /* Alinear elementos dentro */
+    padding: 10px; /* Espaciado interno */
+}
+
+.logo img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Barra de busqueda */
+.search-input {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-button{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
