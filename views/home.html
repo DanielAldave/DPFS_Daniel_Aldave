@@ -5,59 +5,392 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>El Rey de los Pantalones</title>
 </head>
 <body>
     <header>
         <!-- Cabezal de la pagina -->
         <div class="top-bar">
+            <!-- div del logo -->
             <div class="logo">
-            <img src="../public/img/logo_2.png" alt="Logo el rey de los pantalones">
+                <img src="../public/img/logo_2.png" alt="Logo el rey de los pantalones">
             </div>
             <!-- Barra de busqueda -->
-            <form action="search-box" role="search">
-                <label for="search" class="visually-hidden"></label>
+            <form class=search-box action="search-box" role="search">
+                <span class="search-icon material-symbols-outlined">search</span>
                 <input class="search-input" type="text" name="" id="search" placeholder="¿Que estás buscando?" >
-                <button class="search-button" type="submit">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="7" stroke="black" stroke-width="2"/>
-                        <line x1="15" y1="15" x2="20" y2="20" stroke="black" stroke-width="2"/>
-                    </svg>
-                </button>
             </form>
             <!-- menu de usuario -->
             <nav class="user-menu">
-                <ul>
-                    <li><a href="">Iniciar Sesion / Resgistrarse</a></li>
-                    <li><a href="">Carrito de compras</a></li>
+                <ul class="user-menu-list">
+                    <a href=""><li><i class="ri-user-fill"></i><span>Iniciar Sesion / Resgistrarse</span></li></a>
+                    <a href=""><li><i class="ri-shopping-bag-fill"></i> <span>Carrito de compras</span></li></a>
                 </ul>
-            </nav>
-            <!-- barra de categorias -->
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="">Trajes</a></li>
-                    <li><a href="">Sacos</a></li>
-                    <li><a href="">Chalecos</a></li>
-                    <li><a href="">Camisas</a></li>
-                    <li><a href="">Pantalones</a></li>
-                    <li><a href="">SALE</a></li>
-                </ul>
-            </nav>
+            </nav>    
         </div>
+        <!-- barra de categorias -->
+        <nav class="main-menu">
+            <ul class="main-menu-list">
+                <a href="#" class="active"><li>Inicio</li></a>
+                <a href="#"><li>Trajes</li></a>
+                <a href="#"><li>Sacos</li></a>
+                <a href="#"><li>Chalecos</li></a>
+                <a href="#"><li>Camisas</li></a>
+                <a href="#"><li>Pantalones</li></a>
+                <a href="#"><li>SALE</li></a>
+            </ul>
+        </nav>
     </header>
-        <!-- empieza el main de la pagina -->
+    <!-- js link -->
+    <script type="text/javascript" src="js/script.js"></script>
+
     <main>
+        <!-- section destacados -->
         <section aria-labelledby="destacados">
-            <h2 id="destacados">Destacados</h2>
-            <div class="carousel">
-                <article>
-                    <img class="imagen-producto" src="../public/img/imagen default.jpg" alt="imagen del producto">
-                    <h3 class="producto-catalogo">Camisa blanca</h3>
-                </article>
-            </div>
+            <h2 class=Title id="destacados">Destacados</h2>
+            <div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="0" class="active"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="1"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="w-100 caja-tarjetas" alt="First slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Second slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Third slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon primary" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-1" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon text-primary"  aria-hidden="true">
+                  </span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
         </section>
+        <!-- section novedades -->
+        <section aria-labelledby="novedades">
+            <h2 class=Title id="novedades">Novedades</h2>
+            <div id="carouselExampleIndicators-2" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="linea" data-target="#carouselExampleIndicators-2" data-slide-to="0" class="active"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators-2" data-slide-to="1"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators-2" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="w-100 caja-tarjetas" alt="First slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Second slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Third slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon primary" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon text-primary"  aria-hidden="true">
+                  </span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </section>
+        <!-- section ofertas -->
+        <section aria-labelledby="ofertas">
+            <h2 class=Title id="ofertas">Ofertas</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="linea" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li class="linea" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="w-100 caja-tarjetas" alt="First slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Second slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="w-100 caja-tarjetas" alt="Third slide">
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img class="fotico" src="../public/img/imagen default.jpg" alt="imagen default">
+                            <h3 class="Titulo-producto">Titulo</h3>
+                            <p class="precio">precio</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon primary" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon text-primary"  aria-hidden="true">
+                  </span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </section>
+        <!-- section ig -->
+         <section class="ig">
+            <i class="ri-instagram-line"></i>
+            <p>Seguinos en @</p>
+         </section>
+         <!-- section newsletter -->
+          <section class="newsletter">
+            <h2>Newsletter</h2>
+            <p>¿Queres recibir nuestras ofertas?<br>
+            ¡Registrate ya mismo y comenza a disfrutarlas!</p>
+            <div class="newsletter-box">
+                <input type="text" placeholder="Email">
+                <button>Enviar</button>
+            </div>
+          </section>
     </main>
         <!-- Empieza el footer de la pagina -->
-    <footer></footer>
+    <footer>
+        <div class="info">
+            <div class="footer-contactos">
+                <span>5422122122122</span>
+                <span>+5422122122122</span>
+                <span>soporte.reydelpantalon@gmail.com</span>
+            </div>
+            <div class="footer-categorias">
+                <ul class="footer-categorias-list">
+                    <a href="#"><li>Trajes</li></a>
+                    <a href="#"><li>Sacos</li></a>
+                    <a href="#"><li>Chalecos</li></a>
+                    <a href="#"><li>Camisas</li></a>
+                    <a href="#"><li>Pantalones</li></a>
+                    <a href="#"><li>SALE</li></a>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h2>Newsletter</h2>
+                <div class="footer-newsletter-box">
+                    <input type="text" placeholder="Email">
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-medios-pago">
+            <h2>Medios de pago</h2>
+            <div class="footer-medios-pago-list">
+                <i class="ri-visa-line"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

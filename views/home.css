@@ -1,6 +1,8 @@
+
+
+
 /* articulos de la tienda */
 article {
-    
     border: 2px groove;
 }
 
@@ -12,3 +14,76 @@ article {
     width: 200px;
     height: 200px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Asegúrate de que no haya fondo */
+  filter: invert(100%); /* Cambia el color del ícono */
+}
+
+.linea {
+    background-color: transparent; /* Asegúrate de que no haya fondo */
+    filter: invert(100%); /* Cambia el color del ícono */
+    opacity: 0.5;;
+    display: none;
+}
+
+/* productos */
+.tarjeta {
+    
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.Titulo-producto{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.precio{
+    font-size: 25px;
+    text-align: center;
+}
+
+.fotico{
+    width: 100%;
+
+}
+
+.caja-tarjetas{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+
+
+section{
+    border: 2px solid black;
+    padding: 15px 30px;
+}
+
+.ig{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    gap: 15px;
+}
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+.newsletter h2{
+    font-size: 40px;
+}
+
