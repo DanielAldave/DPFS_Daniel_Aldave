@@ -1,0 +1,85 @@
+.indice-div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.indice{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.indice a{
+    color: black;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none; 
+    border: none; 
+}
+
+/* Estilo para el contenedor del formulario */
+.registro-div {
+    width: 400px; /* Ajusta el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-family: 'Lato', sans-serif; /* Fuente consistente */
+}
+
+/* Estilo para los campos de entrada */
+.registro input[type="text"],
+.registro input[type="tel"],
+.registro input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado entre campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}
+
+/* Estilo para las etiquetas */
+.registro label {
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 5px; /* Espaciado debajo de la etiqueta */
+    display: block; /* Asegura que esté en su propia línea */
+}
+
+/* Estilo para el botón */
+button {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    background-color: #ff5722; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+button:hover {
+    background-color: #e64a19; /* Color al pasar el mouse */
+}
+
+/* Estilo para el texto debajo del botón */
+span {
+    display: block; /* Asegura que esté en su propia línea */
+    text-align: center; /* Centra el texto */
+    margin-top: 15px; /* Espaciado superior */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+span a {
+    color: black; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+span a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
