@@ -1,9 +1,20 @@
-/* indice */
-.indice-div {
-    display: flex;
-    list-style: none;
+/* Estilo general */
+body {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    margin: 0;
     padding: 0;
-    margin-left: 20px;
+}
+
+/* Contenedor principal */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Índice */
+.indice-div {
+    margin-bottom: 20px;
 }
 
 .indice {
@@ -19,6 +30,236 @@
 }
 
 .indice a:hover {
+    text-decoration: underline;
+}
+
+/* Datos de contacto */
+.datos-contacto {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.datos-contacto h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.datos-contacto label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.datos-contacto input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.datos-contacto .checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.datos-contacto .checkbox input {
+    margin-right: 5px;
+}
+
+/* Entrega */
+.entrega {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.entrega h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cambiar-cp {
+    font-size: 12px;
+    color: #007bff;
     text-decoration: none;
+}
+
+.cambiar-cp:hover {
+    text-decoration: underline;
+}
+
+.opcion-entrega {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.opcion-entrega input[type="radio"] {
+    margin-right: 10px;
+}
+
+.opcion-entrega label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detalle-entrega {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.detalle-entrega select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.detalle-entrega p {
+    margin: 5px 0;
+}
+
+.detalle-entrega ul {
+    margin: 5px 0;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.detalle-entrega ul li {
+    list-style: disc;
+}
+
+/* Precio */
+.precio {
+    font-size: 14px;
+    font-weight: bold;
     color: black;
+}
+
+/* Datos de facturación */
+.datos-facturacion {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.datos-facturacion h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.datos-facturacion label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.datos-facturacion input,
+.datos-facturacion select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.datos-facturacion .otra-persona {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.datos-facturacion .otra-persona input {
+    margin-right: 5px;
+}
+
+/* Botón continuar */
+.btn-continuar {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-continuar:hover {
+    background-color: #333;
+}
+
+/* Detalle del producto */
+.detalle-producto {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalle-producto img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.detalle-producto .info {
+    flex-grow: 1;
+}
+
+.detalle-producto .subtotal {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Resumen de compra */
+.resumen-compra {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.resumen-compra p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.resumen-compra h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.resumen-compra .precio-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.resumen-compra .agregar-cupon {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resumen-compra .agregar-cupon:hover {
+    text-decoration: underline;
 }
