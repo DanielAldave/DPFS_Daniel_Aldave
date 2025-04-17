@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="general.css">
-        <link rel="stylesheet" href="carrito.css">
+        <link rel="stylesheet" href="../public/css/general.css">
+        <link rel="stylesheet" href="../public/css/carrito.css">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -78,13 +78,13 @@
     <div class="detalle-entrega">
         <!-- entrega -->
         <div class="entrega">
-            <h2>Entrega <a href="#" class="cambiar-cp">Cambiar CP 1032</a></h2>
+            <h2>Entrega <a href="#" class="cambiar-cp">Cambiar CP 1757</a></h2>
     
             <!-- Envío a domicilio -->
             <div class="opcion-entrega">
                 <input type="radio" id="envio-domicilio" name="entrega" value="envio-domicilio">
                 <label for="envio-domicilio">
-                    <strong>Envío Nube - Correo Argentino Clásico a domicilio</strong>
+                    <strong>Paqueteria de envio</strong>
                     <p>Llega entre viernes 18/04 y jueves 24/04</p>
                 </label>
                 <span class="precio">$ 5.914,00</span>
@@ -99,7 +99,7 @@
                 </label>
                 <div class="detalle-entrega">
                     <select>
-                        <option>Envío Nube - Correo Argentino Clásico a sucursal - ONCE - TTE GRAL</option>
+                        <option>Local 1</option>
                     </select>
                     <p>Retirás entre el viernes 18/04 y el jueves 24/04</p>
                     <ul>
@@ -123,18 +123,18 @@
         
             <!-- DNI o CUIT -->
             <label for="dni-cuit">DNI o CUIT</label>
-            <input type="text" id="dni-cuit" name="dni-cuit" placeholder="45.583.337" required>
+            <input type="text" id="dni-cuit" name="dni-cuit" placeholder="DNI" required>
         
             <!-- Persona que pagará el pedido -->
             <h3>Persona que pagará el pedido</h3>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Daniel" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
         
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="A." required>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
         
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+541155074528" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="Celular" required>
         
             <!-- Otra persona va a retirar el pedido -->
             <div class="otra-persona">
@@ -162,38 +162,7 @@
     </div>
     </main>
         <!-- Empieza el footer de la pagina -->
-    <footer>
-        <div class="info">
-            <div class="footer-contactos">
-                <span>5422122122122</span>
-                <span>+5422122122122</span>
-                <span>soporte.reydelpantalon@gmail.com</span>
-            </div>
-            <div class="footer-categorias">
-                <ul class="footer-categorias-list">
-                    <a href="#"><li>Trajes</li></a>
-                    <a href="#"><li>Sacos</li></a>
-                    <a href="#"><li>Chalecos</li></a>
-                    <a href="#"><li>Camisas</li></a>
-                    <a href="#"><li>Pantalones</li></a>
-                    <a href="#"><li>SALE</li></a>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h2>Newsletter</h2>
-                <div class="footer-newsletter-box">
-                    <input type="text" placeholder="Email">
-                    <button>Enviar</button>
-                </div>
-            </div>
-        </div>
-        <div class="footer-medios-pago">
-            <h2>Medios de pago</h2>
-            <div class="footer-medios-pago-list">
-                <i class="ri-visa-line"></i>
-            </div>
-        </div>
-    </footer>
+        <%- include('partials/footer.ejs') %>
     <!-- scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
