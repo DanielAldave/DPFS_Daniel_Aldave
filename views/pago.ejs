@@ -12,7 +12,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
         <title>El Rey de los Pantalones - Pago</title>
-        <link rel="stylesheet" href="/css/pago.css" />
     </head>
 <body>
     <%- include('partials/header.ejs') %>
@@ -22,49 +21,76 @@
             <h2>Entrega | Pago</h2>
             <form method="post" action="/pago/confirmar">
                 <div class="datos-contacto">
-                    <label for="email">E-mail</label>
+                    <label for="email"><i class="ri-mail-line"></i> E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Tu email" required />
                 </div>
 
                 <div class="punto-retiro">
-                    <h3>Punto de retiro</h3>
-                    <p>Envío Nube - Correo Argentino Clásico a sucursal - Dirección de sucursal</p>
-                    <p>Retirás entre el ... y el ...</p>
-                    <a href="#">Cambiar</a>
+                    <h3><i class="ri-store-line"></i> Punto de retiro</h3>
+                    <p>Envío Nube - Correo Argentino Clásico a sucursal - DIRECCIÓN DE SUCURSAL</p>
+                    <p>Retirás entre el día X y el día Y</p>
+                    <a href="#" class="cambiar-cp">Cambiar</a>
                 </div>
 
                 <div class="datos-cobranza">
-                    <h3>Datos de cobranza</h3>
-                    <p>Nombre y apellido</p>
+                    <h3><i class="ri-file-list-3-line"></i> Datos de cobranza</h3>
+                    <p><strong>Nombre y apellido</strong></p>
                     <p>Teléfono</p>
                     <h3>Persona que retirará el pedido</h3>
                     <p>Nombre y apellido</p>
-                    <a href="#">Cambiar</a>
+                    <a href="#" class="cambiar-cp">Cambiar</a>
                 </div>
 
                 <div class="medio-pago">
                     <h3>Medio de pago</h3>
                     <ul>
-                        <li>Tarjeta de crédito o débito <span>HASTA 3 CUOTAS SIN INTERÉS</span></li>
-                        <li>Efectivo</li>
-                        <li>Transferencia <span>20% DE DESCUENTO</span></li>
-                        <li>Mercado Pago <span>HASTA 3 CUOTAS SIN INTERÉS</span></li>
-                        <li>Cuotas sin Tarjeta de Mercado Pago</li>
+                        <li>
+                            <div class="medio-pago-content">
+                                <i class="ri-credit-card-line"></i>
+                                <span class="medio-pago-text">Tarjeta de crédito o débito</span>
+                                <span class="medio-pago-badge">HASTA 3 CUOTAS SIN INTERÉS</span>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="medio-pago-content">
+                                <i class="ri-money-dollar-circle-line"></i>
+                                <span class="medio-pago-text">Efectivo</span>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="medio-pago-content">
+                                <i class="ri-bank-line"></i>
+                                <span class="medio-pago-text">Transferencia</span>
+                                <span class="medio-pago-badge">20% DE DESCUENTO</span>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="medio-pago-content">
+                                <img src="/img/mercado-pago-logo.png" alt="Mercado Pago" class="mercado-pago-logo" />
+                                <span class="medio-pago-text">Mercado Pago</span>
+                                <span class="medio-pago-badge">HASTA 3 CUOTAS SIN INTERÉS</span>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="medio-pago-content">
+                                <i class="ri-wallet-line"></i>
+                                <span class="medio-pago-text">Cuotas sin Tarjeta de Mercado Pago</span>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="notas-pedido">
-                    <label for="notas">Notas de pedido</label>
-                    <textarea id="notas" name="notas" rows="4" placeholder="Escribe una nota para tu pedido"></textarea>
-                </div>
-
                 <button type="submit" class="btn-realizar-pedido">Realizar pedido</button>
             </form>
         </section>
         <div class="resumen-compra-col">
             <div class="resumen-compra-single-div">
                 <div class="resumen-producto">
-                    <img src="/img/default.jpg" alt="Producto" />
+                    <img src="/img/imagen default.jpg" alt="Producto" />
                     <div class="resumen-producto-info">
                         <p>Nombre del producto (Color, Talle) × Cantidad</p>
                     </div>
