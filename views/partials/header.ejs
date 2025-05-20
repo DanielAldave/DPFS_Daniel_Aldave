@@ -1,23 +1,23 @@
 <header>
     <!-- Cabezal de la pagina -->
-    <div class="top-bar">
-        <!-- div del logo -->
-        <div class="logo">
-            <img src="../public/img/logo_2.png" alt="Logo el rey de los pantalones">
+        <div class="top-bar">
+            <!-- div del logo -->
+            <div class="logo">
+                <a href="/"><img src="/img/logo_2.png" alt="Logo el rey de los pantalones"></a>
+            </div>
+            <!-- Barra de busqueda -->
+            <form class=search-box action="search-box" role="search">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input class="search-input" type="text" name="" id="search" placeholder="¿Que estás buscando?" >
+            </form>
+            <!-- menu de usuario -->
+            <nav class="user-menu">
+                <ul class="user-menu-list">
+                    <a href="/login"><li><i class="ri-user-fill"></i><span>Iniciar Sesion / Resgistrarse</span></li></a>
+                    <a href="/carrito"><li><i class="ri-shopping-bag-fill"></i> <span>Carrito de compras</span></li></a>
+                </ul>
+            </nav>    
         </div>
-        <!-- Barra de busqueda -->
-        <form class=search-box action="search-box" role="search">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input class="search-input" type="text" name="" id="search" placeholder="¿Que estás buscando?" >
-        </form>
-        <!-- menu de usuario -->
-        <nav class="user-menu">
-            <ul class="user-menu-list">
-                <a href=""><li><i class="ri-user-fill"></i><span>Iniciar Sesion / Resgistrarse</span></li></a>
-                <a href=""><li><i class="ri-shopping-bag-fill"></i> <span>Carrito de compras</span></li></a>
-            </ul>
-        </nav>    
-    </div>
     <!-- barra de categorias -->
     <nav class="main-menu">
         <ul class="main-menu-list">

@@ -11,9 +11,29 @@ app.get('/addProduct', (req, res) => {
     res.send('Aqui va el form')
   })
 
-  app.get('/login', (req, res) => {
-    res.send('Aqui va la vista del login')
+app.get('/login', (req, res) => {
+    res.render('login')
   })
+
+app.get('/producto', (req, res) => {
+  res.render('producto')
+})
+
+app.get('/carrito', (req, res) => {
+  res.render('carrito')
+})
+
+app.get('/Registro', (req, res) => {
+  res.render('Registro')
+})
+
+app.get('/login', (req, res) => {
+  res.render('login')
+})
+
+app.get('/pago', (req, res) => {
+  res.render('pago')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

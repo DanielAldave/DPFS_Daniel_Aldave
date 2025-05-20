@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/general.css" />
+        <link rel="stylesheet" href="/css/pago.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <title>El Rey de los Pantalones - Pago</title>
+        <link rel="stylesheet" href="/css/pago.css" />
+    </head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main>
+        <section class="pago-section">
+            <h2>Entrega | Pago</h2>
+            <form method="post" action="/pago/confirmar">
+                <div class="datos-contacto">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required />
+                </div>
+
+                <div class="punto-retiro">
+                    <h3>Punto de retiro</h3>
+                    <p>Envío Nube - Correo Argentino Clásico a sucursal - Dirección de sucursal</p>
+                    <p>Retirás entre el ... y el ...</p>
+                    <a href="#">Cambiar</a>
+                </div>
+
+                <div class="datos-cobranza">
+                    <h3>Datos de cobranza</h3>
+                    <p>Nombre y apellido</p>
+                    <p>Teléfono</p>
+                    <h3>Persona que retirará el pedido</h3>
+                    <p>Nombre y apellido</p>
+                    <a href="#">Cambiar</a>
+                </div>
+
+                <div class="medio-pago">
+                    <h3>Medio de pago</h3>
+                    <ul>
+                        <li>Tarjeta de crédito o débito <span>HASTA 3 CUOTAS SIN INTERÉS</span></li>
+                        <li>Efectivo</li>
+                        <li>Transferencia <span>20% DE DESCUENTO</span></li>
+                        <li>Mercado Pago <span>HASTA 3 CUOTAS SIN INTERÉS</span></li>
+                        <li>Cuotas sin Tarjeta de Mercado Pago</li>
+                    </ul>
+                </div>
+
+                <div class="notas-pedido">
+                    <label for="notas">Notas de pedido</label>
+                    <textarea id="notas" name="notas" rows="4" placeholder="Escribe una nota para tu pedido"></textarea>
+                </div>
+
+                <button type="submit" class="btn-realizar-pedido">Realizar pedido</button>
+            </form>
+        </section>
+        <div class="resumen-compra-col">
+            <div class="resumen-compra-single-div">
+                <div class="resumen-producto">
+                    <img src="/img/default.jpg" alt="Producto" />
+                    <div class="resumen-producto-info">
+                        <p>Nombre del producto (Color, Talle) × Cantidad</p>
+                    </div>
+                    <div class="resumen-producto-precio">$ 0,00</div>
+                </div>
+                <div class="resumen-subtotal">
+                    <span>Subtotal</span>
+                    <span>$ 0,00</span>
+                </div>
+                <div class="resumen-envio">
+                    <span>Costo de envío</span>
+                    <span>$ 0,00</span>
+                </div>
+                <div class="resumen-total">
+                    <span>Total</span>
+                    <span>$ 0,00</span>
+                </div>
+                <a href="#" class="resumen-cupon">Agregar cupón de descuento</a>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
