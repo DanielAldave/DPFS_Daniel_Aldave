@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head.ejs', {style : 'general', stylemain : 'nuevoProducto'})  %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main>
+        <section class="pago-section">
+            <h2>Agregar Nueva Prenda</h2>
+            <form method="post" action="/producto/postCreate" enctype="multipart/form-data" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre de la prenda</label>
+                    <input type="text" value="<%= locals.old?.name ? old.name : "" %>" id="nombre" name="nombre" placeholder="Nombre del producto" required />
+                    <% if (locals.errors?.name) { %>
+                        <p class="error"><%= locals.errors.name.msg %></p>
+                       <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Descripción del producto" required><%= locals.old?.description ? old.description : "" %></textarea>
+                    <% if (locals.errors?.name) { %>
+                        <p class="error"><%= locals.errors.name.msg %></p>
+                       <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" value="<%= locals.old?.price ? old.price : "" %>" id="precio" name="precio" placeholder="Precio en $ ARS" step="0.01" min="0" required />
+                    <% if (locals.errors?.name) { %>
+                        <p class="error"><%= locals.errors.name.msg %></p>
+                       <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color" placeholder="Color de la prenda" required />
+                    
+                        
+                </div>
+
+                <div class="form-group">
+                    <label for="talle">Talle</label>
+                    <input type="text" id="talle" name="talle" placeholder="Talle (S, M, L, XL, etc.)" required />
+                    
+                        
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" required />
+                    
+                </div>
+
+                <button type="submit" class="btn-realizar-pedido">Agregar Producto</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

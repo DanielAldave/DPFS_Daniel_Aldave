@@ -52,12 +52,14 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="w-100 caja-tarjetas" alt="First slide">
-                        <div class="tarjeta">
-                        <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
-                        <h3 class="Titulo-producto">Titulo</h3>
-                        <p class="precio">precio</p>
-                    </div>
+                    <% products.forEach(product => { %>
                     <div class="tarjeta">
+                        <img class="fotico" src="/img/products/<%= product.image %>" alt="imagen default">
+                        <h3 class="Titulo-producto"><%= product.name %></h3>
+                        <p class="precio"><%= product.price %></p>
+                    </div>
+                    <% }) %>
+                    <!-- <div class="tarjeta">
                         <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
                         <h3 class="Titulo-producto">Titulo</h3>
                         <p class="precio">precio</p>
@@ -134,8 +136,8 @@
                 </a>
               </div>
         </section>
-        <!-- section novedades -->
-        <section aria-labelledby="novedades">
+        < section novedades -->
+        <!-- <section aria-labelledby="novedades">
             <h2 class=Title id="novedades">Novedades</h2>
             <div id="carouselExampleIndicators-2" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -228,8 +230,8 @@
                 </a>
               </div>
         </section>
-        <!-- section ofertas -->
-        <section aria-labelledby="ofertas">
+        < section ofertas -->
+        <!-- <section aria-labelledby="ofertas">
             <h2 class=Title id="ofertas">Ofertas</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -320,8 +322,8 @@
                   </span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
-        </section>
+              </div> 
+        </section>  -->
         <!-- section ig -->
          <section class="ig">
             <i class="ri-instagram-line"></i>
