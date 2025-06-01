@@ -2,6 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
+const methordOverride = require('method-override')
+const session = require('express-session')
+
+const corse = require('cors')
+
+app.use(corse())
+
+app.use(express.urlencoded({ extended: false })) // Para manejar datos de formularios
+app.use(express.json()) // Para manejar datos JSON
+app.use(methordOverride('_method')) // Para manejar métodos PUT y DELETE en formularios
 
 // Configuración de EJS
 app.set('view engine', 'ejs');
@@ -18,12 +28,18 @@ app.get('/addProduct', (req, res) => {
     res.send('Aqui va el form')
   })
 
-app.get('/login', (req, res) => {
-    res.render('login')
-  })
 
-app.get('/producto', (req, res) => {
-  res.render('producto')
+app.get('/detail', (req, res) => {
+  res.render('detail', {
+    title: 'Detalle del Producto',
+    product: {
+      id: 1,
+      name: 'Producto Ejemplo',
+      description: 'Descripción del producto de ejemplo',
+      price: 100,
+      image: 'imagen-ejemplo.jpg'
+    }
+  })
 })
 
 app.get('/carrito', (req, res) => {
@@ -38,12 +54,10 @@ app.get('/login', (req, res) => {
   res.render('login')
 })
 
- 
+
+
 // static files
 app.use(express.static(path.join(__dirname, 'public')))
-
-const indexRoutes = require('./routes/home.routes.js')
-app.use('/', indexRoutes)
 
 const productoRoutes = require('./routes/producto.routes.js')
 app.use('/producto', productoRoutes)

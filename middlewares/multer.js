@@ -3,7 +3,7 @@ const path = require("path");
 
 const storageProd = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../public/images/products'));
+    cb(null, path.join(__dirname, '../public/img/products'));
   },
   filename: function (req, file, cb) {
     // const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -14,7 +14,7 @@ const storageProd = multer.diskStorage({
 
 const storageUser = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../public/images/avatar/profiles'));
+    cb(null, path.join(__dirname, '../public/img/avatar/profiles'));
   },
   filename: function (req, file, cb) {
     // const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);

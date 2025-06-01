@@ -44,20 +44,22 @@
         <section aria-labelledby="destacados">
             <h2 class=Title id="destacados">Destacados</h2>
             <div id="carouselExampleIndicators-1" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="0" class="active"></li>
-                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="1"></li>
-                  <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
+                    <ol class="carousel-indicators">
+                    <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="0" class="active"></li>
+                    <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="1"></li>
+                    <li class="linea" data-target="#carouselExampleIndicators-1" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                    <div class="carousel-item active">
                     <div class="w-100 caja-tarjetas" alt="First slide">
                     <% products.forEach(product => { %>
+                    <a class="producto-card" href="/producto/detail/<%= product.id %>">    
                     <div class="tarjeta">
-                        <img class="fotico" src="/img/products/<%= product.image %>" alt="imagen default">
+                        <img class="fotico" src="<%= product.image && product.image !== '' ? '/img/products/' + product.image : '/img/img_default.jpg' %>" alt="imagen producto">
                         <h3 class="Titulo-producto"><%= product.name %></h3>
                         <p class="precio"><%= product.price %></p>
                     </div>
+                    </a>
                     <% }) %>
                     <!-- <div class="tarjeta">
                         <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
@@ -117,7 +119,7 @@
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
                         </div>
-                        <div class="tarjeta">
+                        class="tarjeta">
                             <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
@@ -136,7 +138,7 @@
                 </a>
               </div>
         </section>
-        < section novedades -->
+        <!-- section novedades -->
         <!-- <section aria-labelledby="novedades">
             <h2 class=Title id="novedades">Novedades</h2>
             <div id="carouselExampleIndicators-2" class="carousel slide" data-ride="carousel">
@@ -187,7 +189,7 @@
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
                         </div>
-                        <div class="tarjeta">
+                        class="tarjeta">
                             <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
@@ -211,7 +213,7 @@
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
                         </div>
-                        <div class="tarjeta">
+                        class="tarjeta">
                             <img class="fotico" src="/img/imagen default.jpg" alt="imagen default">
                             <h3 class="Titulo-producto">Titulo</h3>
                             <p class="precio">precio</p>
@@ -230,7 +232,7 @@
                 </a>
               </div>
         </section>
-        < section ofertas -->
+        <!-- section ofertas -->
         <!-- <section aria-labelledby="ofertas">
             <h2 class=Title id="ofertas">Ofertas</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

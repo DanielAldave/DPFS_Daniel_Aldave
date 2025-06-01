@@ -57,7 +57,7 @@
     </header>
     <!-- js link -->
     <script type="text/javascript" src="js/script.js"></script>
-
+<% if (modelFound) { %>
     <main>
         <!-- indice -->
         <div class="indice-div">
@@ -72,40 +72,30 @@
                 <!-- Galería de imágenes -->
                 <div class="producto-galeria">
                     <div class="miniaturas">
-                        <img src="/img/imagen default.jpg" alt="Miniatura 1">
-                        <img src="/img/imagen default.jpg" alt="Miniatura 2">
-                        <img src="/img/imagen default.jpg" alt="Miniatura 3">
-                        <img src="/img/imagen default.jpg" alt="Miniatura 4">
+                        <img src="/img/products/img_default.jpg" alt="Miniatura 1">
+                        <img src="/img/products/img_default.jpg" alt="Miniatura 2">
+                        <img src="/img/products/img_default.jpg" alt="Miniatura 3">
+                        <img src="/img/products/img_default.jpg" alt="Miniatura 4">
                     </div>
                     <div class="imagen-principal">
-                        <img src="/img/imagen default.jpg" alt="Imagen principal">
+                        <img src="/img/products/<%= modelFound.image %>" alt="<%= modelFound.name %>">
                     </div>
                 </div>
         
                 <!-- Información del producto -->
                 <div class="producto-info">
-                    <h1>Camisa Blanca</h1>
-                    <p class="precio-original">$39.500,00</p>
-                    <p class="precio-descuento">$29.500,00 <span class="descuento">25% OFF</span></p>
-                    <p class="precio-transferencia">$24.780,00 con Transferencia o depósito bancario</p>
-                    <p class="detalle-descuento">16% de descuento pagando con Transferencia o depósito bancario</p>
+                    <h1><%= modelFound.name %></h1>
+                    <p class="precio-descuento">$<%= modelFound.price %>,00 </p>
                     <a href="#" class="ver-mas">Ver más detalles</a>
-        
-                    <div class="talles">
-                        <p>Talle: <span>S</span></p>
-                        <button>S</button>
-                        <button>M</button>
-                    </div>
-        
-                    <p class="stock">¡Solo quedan 2 en stock!</p>
-        
-                    <div class="cantidad">
-                        <button>-</button>
-                        <input type="number" value="1" min="1">
-                        <button>+</button>
-                    </div>
-        
                     <button class="btn-agregar">Agregar al carrito</button>
+                    <!-- <div class="talles">
+                        <p>Talle: <span><%= modelFound.talle %></span></p>
+                    </div>
+        -->
+
+                    <form action="/producto/delete/<%= modelFound.id %>?_method=DELETE" method="post">
+                            <button class="delete-product"><i class="fa-solid fa-trash">Eliminar<i></button>
+                    </form>
         
                     <div class="beneficios">
                         <p><i class="ri-shield-check-line"></i> Compra protegida</p>
@@ -124,10 +114,10 @@
             <!-- Descripción -->
             <div class="descripcion">
                 <h2>Descripción</h2>
-                <p>Camisa blanca de corte clásico, suave y ligera. Perfecta para cualquier ocasión, fácil de combinar y cómoda durante todo el día.</p>
+                <p><%= modelFound.description %></p>
             </div>
         </main>
-        
+        <% } %>
     </main>
         <!-- Empieza el footer de la pagina -->
         <%- include('partials/footer.ejs') %>

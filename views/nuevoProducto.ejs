@@ -7,49 +7,57 @@
     <main>
         <section class="pago-section">
             <h2>Agregar Nueva Prenda</h2>
-            <form method="post" action="/producto/postCreate" enctype="multipart/form-data" novalidate>
+            <form method="post" action="/producto/create" enctype="multipart/form-data" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre de la prenda</label>
-                    <input type="text" value="<%= locals.old?.name ? old.name : "" %>" id="nombre" name="nombre" placeholder="Nombre del producto" required />
-                    <% if (locals.errors?.name) { %>
-                        <p class="error"><%= locals.errors.name.msg %></p>
-                       <% } %>
+                    <input name="name" type="text" value="<%= old?.name ? old.name : '' %>" id="nombre" placeholder="Nombre del producto" required />
+                    <% if (errors?.name) { %>
+                        <p class="error"><%= errors.name.msg %></p>
+                    <% } %>
                 </div>
 
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Descripción del producto" required><%= locals.old?.description ? old.description : "" %></textarea>
-                    <% if (locals.errors?.name) { %>
-                        <p class="error"><%= locals.errors.name.msg %></p>
-                       <% } %>
+                    <textarea id="descripcion" name="description" rows="4" placeholder="Descripción del producto" required><%= old?.description ? old.description : '' %></textarea>
+                    <% if (errors?.description) { %>
+                        <p class="error"><%= errors.description.msg %></p>
+                    <% } %>
                 </div>
 
                 <div class="form-group">
                     <label for="precio">Precio</label>
-                    <input type="number" value="<%= locals.old?.price ? old.price : "" %>" id="precio" name="precio" placeholder="Precio en $ ARS" step="0.01" min="0" required />
-                    <% if (locals.errors?.name) { %>
-                        <p class="error"><%= locals.errors.name.msg %></p>
-                       <% } %>
+                    <input type="number" name="price" value="<%= old?.price ? old.price : '' %>" id="precio" placeholder="Precio en $ ARS" step="0.01" min="0" required />
+                    <% if (errors?.price) { %>
+                        <p class="error"><%= errors.price.msg %></p>
+                    <% } %>
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="color">Color</label>
-                    <input type="text" id="color" name="color" placeholder="Color de la prenda" required />
-                    
-                        
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="category" required>
+                        <option value="">Seleccione una categoría</option>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>" <%= old?.category == category.id ? 'selected' : '' %>><%= category.name %></option>
+                        <% }) %>
+                    </select>
+                    <% if (errors?.category) { %>
+                        <p class="error"><%= errors.category.msg %></p>
+                    <% } %>
                 </div>
 
                 <div class="form-group">
                     <label for="talle">Talle</label>
-                    <input type="text" id="talle" name="talle" placeholder="Talle (S, M, L, XL, etc.)" required />
-                    
-                        
+                    <select id="talle" name="talle" required>
+                        <option value="S" <%= old?.talle == 'S' ? 'selected' : '' %>>S</option>
+                        <option value="M" <%= old?.talle == 'M' ? 'selected' : '' %>>M</option>
+                        <option value="L" <%= old?.talle == 'L' ? 'selected' : '' %>>L</option>
+                        <option value="XL" <%= old?.talle == 'XL' ? 'selected' : '' %>>XL</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="imagen">Imagen</label>
-                    <input type="file" id="imagen" name="imagen" accept="image/*" required />
-                    
+                    <input type="file" id="imagen" name="imagen" accept="image/*" />
                 </div>
 
                 <button type="submit" class="btn-realizar-pedido">Agregar Producto</button>

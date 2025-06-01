@@ -14,6 +14,16 @@ article {
     width: 200px;
     height: 200px;
 }
+.producto-card {
+    text-decoration: none;
+    color: black;
+    
+}
+
+:hover .producto-card {
+    text-decoration: none;
+    color: black;
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
