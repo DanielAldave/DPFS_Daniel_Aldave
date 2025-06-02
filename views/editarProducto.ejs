@@ -7,7 +7,7 @@
     <main>
         <section class="pago-section">
             <h2>Editar Prenda</h2>
-            <form method="post" action="/producto/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
+                <form method="post" action="/producto/editar/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre">Nombre de la prenda</label>
                     <input name="name" type="text" value="<%= old?.name || product.name %>" id="nombre" placeholder="Nombre del producto" required />
