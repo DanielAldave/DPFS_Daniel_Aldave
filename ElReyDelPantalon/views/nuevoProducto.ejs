@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head.ejs', {style : 'general', stylemain : 'nuevoProducto'})  %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main>
+        <section class="pago-section">
+            <h2>Agregar Nueva Prenda</h2>
+            <form method="post" action="/producto/create" enctype="multipart/form-data" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre de la prenda</label>
+                    <input name="name" type="text" value="<%= old?.name ? old.name : '' %>" id="nombre" placeholder="Nombre del producto" required />
+                    <% if (errors?.name) { %>
+                        <p class="error"><%= errors.name.msg %></p>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="description" rows="4" placeholder="Descripción del producto" required><%= old?.description ? old.description : '' %></textarea>
+                    <% if (errors?.description) { %>
+                        <p class="error"><%= errors.description.msg %></p>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" name="price" value="<%= old?.price ? old.price : '' %>" id="precio" placeholder="Precio en $ ARS" step="0.01" min="0" required />
+                    <% if (errors?.price) { %>
+                        <p class="error"><%= errors.price.msg %></p>
+                    <% } %>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="category" required>
+                        <option value="">Seleccione una categoría</option>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>" <%= old?.category == category.id ? 'selected' : '' %>><%= category.name %></option>
+                        <% }) %>
+                    </select>
+                    <% if (errors?.category) { %>
+                        <p class="error"><%= errors.category.msg %></p>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="talle">Talle</label>
+                    <select id="talle" name="talle" required>
+                        <option value="S" <%= old?.talle == 'S' ? 'selected' : '' %>>S</option>
+                        <option value="M" <%= old?.talle == 'M' ? 'selected' : '' %>>M</option>
+                        <option value="L" <%= old?.talle == 'L' ? 'selected' : '' %>>L</option>
+                        <option value="XL" <%= old?.talle == 'XL' ? 'selected' : '' %>>XL</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" />
+                </div>
+
+                <button type="submit" class="btn-realizar-pedido">Agregar Producto</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
