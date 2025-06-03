@@ -1,0 +1,23 @@
+.container-counter {
+  background: #23272f;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  min-width: 220px;
+  margin-bottom: 2rem;
+}
+.list-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #7ec4fa;
+}
+.list-count {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-count li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}

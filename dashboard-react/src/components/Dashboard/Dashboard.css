@@ -1,0 +1,22 @@
+.container-dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background: #181a20;
+  overflow-y: auto;
+  flex-grow: 1;
+
+}
+
+.dash-CC {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.count-last {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,8 @@
+.Conteiner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  width: 100vw;
+}

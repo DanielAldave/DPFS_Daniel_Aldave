@@ -1,0 +1,14 @@
+.last {
+  background: #23272f;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  min-width: 220px;
+  margin-bottom: 2rem;
+}
+.last > div:first-child {
+  font-size: 1.2rem;
+  color: #f7b731;
+  margin-bottom: 1rem;
+}
