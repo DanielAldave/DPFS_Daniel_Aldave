@@ -1,6 +1,3 @@
-
-
-
 /* articulos de la tienda */
 article {
     border: 2px groove;
@@ -63,10 +60,12 @@ article {
 
 }
 
+/* Updated to stack items vertically */
 .caja-tarjetas{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -96,4 +95,3 @@ section{
 .newsletter h2{
     font-size: 40px;
 }
-
